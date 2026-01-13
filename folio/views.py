@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Config
 # Create your views here.
 
@@ -11,3 +11,6 @@ def folio(request) :
             'config' : config,
         }
     )
+
+def home(request) :
+    return redirect("https://john-lion.netlify.app/")

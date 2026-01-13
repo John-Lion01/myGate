@@ -92,6 +92,12 @@ button.nav-btn:hover {
     filter: invert(1);
 }
 
+@media (max-width:568px) {
+  header {
+    padding: 5px 20px;
+  }
+}
+
 /* home */
 #home {
   color: #ffffff;
@@ -157,4 +163,27 @@ a.button:hover {
   .home-2 {
     text-align: center;
   }
+}
+@media (max-width:568px) {
+  #home {
+    padding: 30px 15px;
+  }
+}
+
+/* about */
+#about {
+  padding: 20px;
+}
+h1.s-title {
+  font-family: 'IBM Plex Serif' ;
+  font-weight: 800;
+  font-size: 48pt;
+  text-align: center;
+  margin: 20px 0;
+  
+  background: linear-gradient(90deg, #7c3aed 3.85%, green 40.38%, blue 62.5%, crimson 80.77%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
