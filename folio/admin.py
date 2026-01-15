@@ -24,11 +24,13 @@ class AboutAdmin(TranslatableAdmin):
 
 @admin.register(RequestInfo)
 class RequestAdmin(admin.ModelAdmin) :
-    list_display = ['id', 'when', 'domain']
+    list_display = ['id', 'when', 'domain', 'country']
+    readonly_fields = ['country', 'city']
+    list_filter = ['domain', 'ip', 'country']
 
     def change_view(self, request, object_id, form_url="", extra_context=None):
         data: RequestInfo = RequestInfo.objects.get(id=object_id)
-        if data.country == '' or data.town == '' or data.country is None or data.town is None:
+        if data.country == '' or data.city == '' or data.country is None or data.city is None:
             url = f"https://ipinfo.io/{data.ip}/json"
             try :
                 response = requests.get(url).json()
@@ -36,7 +38,7 @@ class RequestAdmin(admin.ModelAdmin) :
                 pass
             else:
                 data.country = response.get("country")
-                data.town = response.get("city")
+                data.city = response.get("city")
                 data.save()
             return super().change_view(request, object_id, form_url, extra_context)
             #JsonResponse(model_to_dict(data))

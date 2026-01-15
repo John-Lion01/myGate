@@ -31,7 +31,7 @@ class RequestInfo(models.Model) :
     when = models.DateTimeField()
 
     country = models.CharField(blank=True,null=True)
-    town = models.CharField(blank=True,null=True)
+    city = models.CharField(blank=True, null=True)
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

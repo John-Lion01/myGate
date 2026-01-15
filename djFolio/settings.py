@@ -60,7 +60,29 @@ INSTALLED_APPS = [
     'storages',
     'debug_toolbar',
 ]
+JAZZMIN_SETTINGS = {
+    "site_title": "JEAN DJANTA PortFolio | Admin",
+    "site_header": "JEAN DJANTA PortFolio | Admin",
+    "site_brand" : "Jean DJ. | GATE",
+    "welcome_sign": "ADMINISTRATION | JEAN DJ. ",
+    "show_ui_builder": True,
+    "copyright" : "Jean DJ. - All right Reserved 2025-2026",
+    "site_logo": "img/logo.png",
+    'login_logo' : None,
+    "topmenu_links": [
 
+        # Url that gets reversed (Permissions can be added)
+        {"name": "Home",  "url": "admin:index", "permissions": ["auth.view_user"]},
+
+        # model admin to link to (Permissions checked against model)
+        {"model": "auth.User"},
+
+        {"name": "Site", "url": "/" }
+    ],
+    "language_chooser": True
+
+    # "language_chooser" : True,
+}
 MIDDLEWARE = [
     'debug_toolbar.middleware.DebugToolbarMiddleware',
     'django.middleware.security.SecurityMiddleware',
