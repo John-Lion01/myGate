@@ -46,11 +46,19 @@ class Project(TranslatableModel) :
     )
 
     visible = models.BooleanField(default=False)
+    top = models.BooleanField(default=False)
     github = models.URLField(blank=True)
     web = models.URLField(blank=True)
+    tools = models.JSONField(default=list, blank=True)
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
+    class Meta :
+        ordering = ['-created']
+        indexes = [
+            models.Index(fields=['visible', 'top'])
+        ]
 
     def __str__(self):
         return f"{self.title}"

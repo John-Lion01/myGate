@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .models import Config, About, RequestInfo
+from .models import Config, About, RequestInfo, Project
 from django.utils import timezone
 from django.http.request import HttpRequest
 from django.core.handlers.wsgi import WSGIRequest
@@ -30,12 +30,15 @@ def get_request(view):
 def folio(request) :
     config = Config.objects.first()
     about = About.objects.first()
+    top_project = Project.objects.filter(visible=True, top=True)
     return render(
         request,
         'folio/folio.html',
         {
             'config' : config,
             'about' : about,
+            'projects' : top_project,
+            'proj' : top_project.first(),
         }
     )
 

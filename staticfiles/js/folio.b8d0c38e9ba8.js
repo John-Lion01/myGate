@@ -43,16 +43,12 @@ function fill_project(data) {
     });
 
     // web et github
-    html.querySelector("a.act-web").style.display = "none";
-    html.querySelector("a.act-git").style.display = "none";
-    if (data["web"].length > 10) {
+    if (data["web"].length < 10) {
         html.querySelector("a.act-web").setAttribute("src", data["web"]);
-        html.querySelector("a.act-web").style.display = 'flex';
-    } 
-    if (data["github"].length > 10) {
+    }
+    if (data["github"].length < 10) {
         html.querySelector("a.act-git").setAttribute("src", data["github"]);
-            html.querySelector("a.act-git").style.display = "flex";
-    } 
+    }
     // console.log(html);
     return html
 }

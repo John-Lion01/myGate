@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 import os
 from pathlib import Path
+
 from django.utils.translation import gettext_lazy as _
 from dotenv import load_dotenv
 
@@ -201,7 +202,7 @@ AWS_DEFAULT_ACL = 'public-read'
 
 STORAGES = {
     "default": {
-        "BACKEND": "djFolio.storages_backends.SupabaseMediaStorage",
+        "BACKEND": "djFolio.storages_backends.SupabaseMediaStorage" if DB_TYP == 'online' else 'django.core.files.storage.FileSystemStorage',
     },
     "staticfiles": {
         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
@@ -211,7 +212,7 @@ STORAGES = {
 from django.core.files.storage import storages
 
 DEFAULT_STORAGE = storages.create_storage({
-    "BACKEND": "storages.backends.s3boto3.S3Boto3Storage"
+    "BACKEND": "storages.backends.s3boto3.S3Boto3Storage"  if DB_TYP == 'online' else 'django.core.files.storage.FileSystemStorage'
 })
 
 AWS_S3_ENDPOINT_URL_PUBLIC = os.getenv("SUPABASE_S3_ENDPOINT_URL_PUBLIC")
@@ -220,6 +221,7 @@ if DB_TYP == "online" :
     MEDIA_URL = f"{AWS_S3_ENDPOINT_URL_PUBLIC}/{AWS_STORAGE_BUCKET_NAME}/"
 else:
     MEDIA_URL = 'media/'
+    MEDIA_ROOT = BASE_DIR / 'media'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/5.1/howto/static-files/

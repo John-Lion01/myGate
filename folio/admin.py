@@ -50,8 +50,8 @@ class ImageInline(admin.TabularInline):
 
 @admin.register(Project)
 class ProjectAdmin(TranslatableAdmin):
-    list_display = ['title', 'id', 'visible', 'updated']
-    list_filter = ['visible', 'updated']
-    list_editable = ['visible']
+    list_display = ['title', 'id', 'visible', 'top', 'updated']
+    list_filter = ['visible', 'top', 'updated']
+    list_editable = ['visible', 'top']
 
     inlines = [ImageInline]
