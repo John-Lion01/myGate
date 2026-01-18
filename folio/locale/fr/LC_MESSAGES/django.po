@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-15 01:32+0000\n"
+"POT-Creation-Date: 2026-01-18 10:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,38 +18,62 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: .\folio\templates\folio\folio.html:27 .\folio\templates\folio\folio.html:47
+#: .\folio\templates\folio\folio.html:28 .\folio\templates\folio\folio.html:48
 msgid "Portfolio"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:57
+#: .\folio\templates\folio\folio.html:58
 msgid "Accueil"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:60
+#: .\folio\templates\folio\folio.html:61
 msgid "À Propos"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:63
+#: .\folio\templates\folio\folio.html:64
 msgid "Projets"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:66
+#: .\folio\templates\folio\folio.html:67
 msgid "Compétences"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:69 .\folio\templates\folio\folio.html:105
+#: .\folio\templates\folio\folio.html:70 .\folio\templates\folio\folio.html:106
 msgid "Contact"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:81
+#: .\folio\templates\folio\folio.html:82
 msgid "FR/EN"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:104
+#: .\folio\templates\folio\folio.html:105
 msgid "Mes Projets"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:116
+#: .\folio\templates\folio\folio.html:117
 msgid "À Propos de moi"
+msgstr ""
+
+#: .\folio\templates\folio\folio.html:144
+msgid "Projets mis en Avant"
+msgstr ""
+
+#: .\folio\templates\folio\folio.html:156
+msgid "En ligne"
+msgstr ""
+
+#: .\folio\templates\folio\folio.html:173
+msgid "Details"
+msgstr ""
+
+#: .\folio\templates\folio\folio.html:215
+msgid "Technologies utilisées"
+msgstr ""
+
+#: .\folio\templates\folio\folio.html:223
+msgid "Voir le site web"
+msgstr ""
+
+#: .\folio\templates\folio\folio.html:230
+msgid "Voir le code source"
 msgstr ""

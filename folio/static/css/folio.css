@@ -182,12 +182,13 @@ h1.s-title {
   text-align: center;
   margin: 20px 0;
   text-align: center;
+  color: #ffffff;
   
-  background: linear-gradient(90deg, #7c3aed 3.85%, green 40.38%, blue 62.5%, crimson 80.77%);
+  /* background: linear-gradient(90deg, #7c3aed 3.85%, green 40.38%, blue 62.5%, crimson 80.77%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 #about .pg {
   display: flex;
@@ -528,4 +529,13 @@ a.det:hover {color: #ffffffca;}
     max-width: none;
   }
 
+}
+
+
+/* footer */
+footer {
+    background: #0f1724 !important;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
 }

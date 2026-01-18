@@ -8,8 +8,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-15 01:32+0000\n"
-"PO-Revision-Date: 2026-01-15 01:33+0000\n"
+"POT-Creation-Date: 2026-01-18 10:24+0000\n"
+"PO-Revision-Date: 2026-01-18 10:28+0000\n"
 "Last-Translator:   <jeansdjanta@hotmail.com>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "Language: \n"
@@ -19,43 +19,66 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.3\n"
 
-#: .\folio\templates\folio\folio.html:27 .\folio\templates\folio\folio.html:47
+#: .\folio\templates\folio\folio.html:28 .\folio\templates\folio\folio.html:48
 msgid "Portfolio"
 msgstr "Portfolio"
 
-#: .\folio\templates\folio\folio.html:57
+#: .\folio\templates\folio\folio.html:58
 msgid "Accueil"
 msgstr "Home"
 
-#: .\folio\templates\folio\folio.html:60
+#: .\folio\templates\folio\folio.html:61
 msgid "À Propos"
 msgstr "About"
 
-#: .\folio\templates\folio\folio.html:63
+#: .\folio\templates\folio\folio.html:64
 msgid "Projets"
 msgstr "Projects"
 
-#: .\folio\templates\folio\folio.html:66
+#: .\folio\templates\folio\folio.html:67
 msgid "Compétences"
 msgstr "Skills"
 
-#: .\folio\templates\folio\folio.html:69
-#: .\folio\templates\folio\folio.html:105
+#: .\folio\templates\folio\folio.html:70
+#: .\folio\templates\folio\folio.html:106
 msgid "Contact"
 msgstr "Contact"
 
-#: .\folio\templates\folio\folio.html:81
+#: .\folio\templates\folio\folio.html:82
 msgid "FR/EN"
 msgstr "EN/FR"
 
-#: .\folio\templates\folio\folio.html:104
+#: .\folio\templates\folio\folio.html:105
 msgid "Mes Projets"
 msgstr "My Projects"
 
-#: .\folio\templates\folio\folio.html:116
-#| msgid "À Propos"
+#: .\folio\templates\folio\folio.html:117
 msgid "À Propos de moi"
 msgstr "About Me"
+
+#: .\folio\templates\folio\folio.html:144
+msgid "Projets mis en Avant"
+msgstr "Featured Projects"
+
+#: .\folio\templates\folio\folio.html:156
+msgid "En ligne"
+msgstr "Online"
+
+#: .\folio\templates\folio\folio.html:173
+msgid "Details"
+msgstr "Details"
+
+#: .\folio\templates\folio\folio.html:215
+msgid "Technologies utilisées"
+msgstr "Technologies used"
+
+#: .\folio\templates\folio\folio.html:223
+msgid "Voir le site web"
+msgstr "See the website"
+
+#: .\folio\templates\folio\folio.html:230
+msgid "Voir le code source"
+msgstr "View source code"
 
 #~ msgid ""
 #~ "\n"

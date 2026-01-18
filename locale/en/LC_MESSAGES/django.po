@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-15 01:32+0000\n"
+"POT-Creation-Date: 2026-01-18 10:24+0000\n"
 "PO-Revision-Date: 2026-01-11 22:54+0000\n"
 "Last-Translator:   <>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,10 +19,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Translated-Using: django-rosetta 0.10.3\n"
 
-#: .\djFolio\settings.py:148
+#: .\djFolio\settings.py:171
 msgid "Français"
 msgstr "French"
 
-#: .\djFolio\settings.py:149
+#: .\djFolio\settings.py:172
 msgid "Anglais"
 msgstr "English"

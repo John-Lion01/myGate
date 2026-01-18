@@ -11,6 +11,7 @@ function show_project() {
     set_detail(proj_detail);
     // console.log(document.querySelector(".folio.content.hide"));
     // chevron();
+    load_image();
     attendre_fermeture(proj_detail);
 }
 
@@ -85,6 +86,14 @@ function attendre_fermeture(detail){
             cur_project = 0
         }
     })
+    document.addEventListener("keydown", (e) =>{
+        if (e.code == "Escape") {
+            detail.classList.remove("show");
+            document.querySelector(".folio.content").classList.remove("hide-root");
+            document.body.style.overflow = "";
+            cur_project = 0
+        }
+    });
 }
 // chevron
 function chevron(){
@@ -93,21 +102,46 @@ function chevron(){
     ch_l.addEventListener("click", (e) =>{
         e.preventDefault();
         cur_project = (cur_project - 1 + all_projects.length)%all_projects.length
-        console.log("left" + cur_project);
         show_project();
-        setTimeout(() => {
-            
-        }, 5);
     });
 
     ch_r.addEventListener("click", (e) =>{
         e.preventDefault();
         cur_project = (cur_project + 1)%all_projects.length
-        console.log("right => " + cur_project);
         show_project();
+    });
+
+    const det_html = document.querySelector(".project-detail");
+    document.addEventListener("keydown", (e)=>{
+        if (e.code == "ArrowLeft" || e.code == "Numpad4") {
+            if (det_html.classList.contains("show")) {
+                e.preventDefault();
+                cur_project = (cur_project - 1 + all_projects.length)%all_projects.length
+                show_project();
+            }
+        } else if (e.code == "ArrowRight" || e.code == "Numpad6") {
+            if (det_html.classList.contains("show")) {
+                e.preventDefault();
+                cur_project = (cur_project + 1)%all_projects.length
+                show_project();
+            }
+        }
     });
 }
 
 document.addEventListener("DOMContentLoaded", (r) => {
     chevron();
 });
+
+function load_image() {
+    const main_image = document.querySelector("img.msh-image");
+    const thumbs = document.querySelectorAll(".project-thumbs img");
+    thumbs.forEach(img => {
+        img.addEventListener("mouseover", (e) => {
+            main_image.setAttribute(
+                "src",
+                img.getAttribute("src")
+            );
+        })
+    })
+}
