@@ -55,19 +55,19 @@
                     <div class="offcanvas-body">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link active mod" href="">{% translate 'Accueil' %}</a>
+                            <a class="nav-link active mod" href="#home">{% translate 'Accueil' %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active mod" href="">{% translate 'À Propos' %}</a>
+                            <a class="nav-link active mod" href="#about">{% translate 'À Propos' %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active mod" href="">{% translate 'Projets' %}</a>
+                            <a class="nav-link active mod" href="#projects">{% translate 'Projets' %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active mod" href="">{% translate 'Compétences' %}</a>
+                            <a class="nav-link active mod" href="#">{% translate 'Compétences' %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active mod" href="">{% translate 'Contact' %}</a>
+                            <a class="nav-link active mod" href="#contact">{% translate 'Contact' %}</a>
                         </li>
                         <li class="nav-item">
                             {% get_current_language as LANGUAGE_CODE %}
@@ -102,8 +102,8 @@
                 {{ config.home_description }}
             </p>
             <div class="home-btn">
-                <a class="button" href="https://john-lion.netlify.app/">{% translate 'Mes Projets' %}</a>
-                <a class="button" href="https://john-lion.netlify.app/">{% translate 'Contact' %}</a>
+                <a class="button" href="#projects">{% translate 'Mes Projets' %}</a>
+                <a class="button" href="#contact">{% translate 'Contact' %}</a>
             </div>
         </div>
         <div class="home-2">
