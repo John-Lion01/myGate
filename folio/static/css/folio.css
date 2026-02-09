@@ -116,12 +116,21 @@ h1.name {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  cursor: pointer;
 }
 p.sh-des {
   font-family: 'IBM Plex Serif' ;
   font-size: 24px;
   text-align: center;
   font-weight: 700;
+}
+p.sh-des:hover{
+  cursor: pointer;
+  box-shadow: 0 15px 35px rgba(0, 229, 255, 0.25);
+  border-color: #00e5ff;
+  border-radius: 16px;
+  transform: translateY(-8px) scale(1.1);
+  padding: 15px;
 }
 .home-btn {
   display: flex;
@@ -183,6 +192,7 @@ h1.s-title {
   margin: 20px 0;
   text-align: center;
   color: #ffffff;
+  cursor: pointer;
   
   /* background: linear-gradient(90deg, #7c3aed 3.85%, green 40.38%, blue 62.5%, crimson 80.77%);
   -webkit-background-clip: text;
@@ -205,6 +215,14 @@ h1.s-title {
   line-height: 145%;
   max-width: 800px;
   display: flex;
+}
+#about p.text:hover {
+  cursor: pointer;
+  box-shadow: 0 15px 35px rgba(0, 229, 255, 0.25);
+  border-color: #00e5ff;
+  border-radius: 16px;
+  transform: translateY(-4px) scale(1.05);
+  padding: 10px;
 }
 #about .start p {
   justify-self: flex-start;
@@ -282,7 +300,10 @@ div.img img:hover {
   margin: 0 10px;
 }
 #projects .card:hover {
-  transform : translate(7px, 7px) scale(1.15);
+  transform : translate(7px, 7px) scale(1.1);
+  box-shadow: 0 15px 35px rgba(0, 229, 255, 0.25);
+  border: solid #00e5ff 2px;
+  cursor: pointer;
 }
 .card.proj img {
   border-radius: 16px;
@@ -392,14 +413,13 @@ a.det:hover {color: #ffffffca;}
   display: none;
   flex-direction: row;
   justify-content: space-between;
-  /* padding: 30px; */
   justify-content: center;
 
-  background: #ffffff67;
-  /* padding: 2rem; */
-  border-radius: 12px;
+  background: #0d1b2a;
+  padding: 2rem;
+  border-radius: 22px;
   max-width: 1200px;
-  width: 90%;
+  width: 95%;
   box-shadow: 0 30px 80px rgba(0,0,0,0.4);  
 
   position: fixed;
@@ -431,13 +451,13 @@ a.det:hover {color: #ffffffca;}
   justify-self: center;
   overflow-y: auto;
   max-height: 99vh;
+  border-radius: 22px;
   /* overflow-x: hidden; */
   width: 100%;
   /* overscroll-behavior: contain; */
 }
 
 .project-content {
-  background: #bf171767;
   display: flex;
   flex-direction: row;
   color: #ffffff;
@@ -446,7 +466,8 @@ a.det:hover {color: #ffffffca;}
   gap: 20px;
   background: rgb(8 47 73 / 0.5);
   border-radius: 20px;
-  padding: 5px;
+  padding: 15px;
+  min-height: max-content;
 }
 
 .project-image {
@@ -492,6 +513,7 @@ a.det:hover {color: #ffffffca;}
   margin: 20px 0;
   display: flex;
   justify-content: space-evenly;
+  min-width: 400px;
 }
 .project-action a {
   text-decoration: none;
@@ -536,7 +558,9 @@ a.det:hover {color: #ffffffca;}
     padding: 90px 30px 40px;
     color: #eaeaea;
     display: flex;
+    flex-direction: column;
     max-width: 1000px;
+    min-width: 700px;
     gap: 40px;
     justify-self: center;
 }
@@ -546,10 +570,17 @@ a.det:hover {color: #ffffffca;}
         max-width: 600px;
     }
 }
+
 .contact-container {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 50px;
+}
+@media (max-width:720px) {
+  .contact-container {
+    display: flex;
+    flex-direction: column;
+  }
 }
 .contact-info h2,
 .contact-form h2 {
@@ -557,15 +588,17 @@ a.det:hover {color: #ffffffca;}
     margin-bottom: 20px;
     color: #00e5ff;
     cursor: pointer;
+    text-align: center;
 }
 
 .contact-info {
-    letter-spacing: 1px;
+  letter-spacing: 1px;
 }
 
 .contact-info ul {
   list-style: none;
   padding: 0;
+  justify-self: center;
 }
 
 .contact-info li {
@@ -602,6 +635,11 @@ a.det:hover {color: #ffffffca;}
 }
 .contact-form p {
     margin-bottom: 10px;
+    text-align: center;
+}
+.contact-form form {
+  max-width: 400px;
+  justify-self: center;
 }
 .contact-form form input,
 .contact-form form textarea {
