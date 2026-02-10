@@ -12,6 +12,9 @@
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
     <link rel="stylesheet" href="{% static 'css/folio.css' %}">
+    <link rel="stylesheet" href="{% static 'css/folio2.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <script src="https://unpkg.com/simple-icons@v11/icons.min.js"></script>
 </head>
 <body>
 <div class="animated-bg"></div>
@@ -64,7 +67,7 @@
                             <a class="nav-link active mod" href="#projects">{% translate 'Projets' %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link active mod" href="#">{% translate 'Compétences' %}</a>
+                            <a class="nav-link active mod" href="#competence">{% translate 'Compétences' %}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link active mod" href="#contact">{% translate 'Contact' %}</a>
@@ -179,6 +182,127 @@
         </div>
     </section>
 
+    <section id="competence">
+        <h1 class="cp-title">
+            {% translate "Compétences" %}
+        </h1>
+        <div class="skills-container">
+            <!-- languages -->
+            <div class="skills-box hidden">
+                <h2>
+                    <i class="fa-solid fa-code"></i>
+                    {% translate "Langages de Programmation" %}
+                </h2> 
+
+                <div class="skill">
+                    <span><i class="fa-brands fa-html5"></i> HTML / CSS</span>
+                    <div class="progress">
+                    <div class="progress-bar" data-level="85%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <span>
+                        <i class="fa-brands fa-python"></i> Python
+                    </span>
+                    <div class="progress">
+                        <div class="progress-bar" data-level="80%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <span><i class="fa-brands fa-js"></i> JavaScript</span>
+                    <div class="progress">
+                    <div class="progress-bar" data-level="60%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <span><i class="fa-brands fa-java"></i> Java </span>
+                    <div class="progress">
+                    <div class="progress-bar" data-level="45%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <span><i class="fa-solid fa-code"></i> C </span>
+                    <div class="progress">
+                    <div class="progress-bar" data-level="35%"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DOMAINES -->
+            <div class="skills-box hidden">
+                <h2><i class="fa-solid fa-bullseye"></i> {% translate "Domaines de Compétence" %}</h2>
+
+                <div class="skill">
+                    <span><i class="fa-solid fa-laptop-code"></i> Développement Web</span>
+                    <div class="progress">
+                    <div class="progress-bar" data-level="85%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <span>  
+                        <i class="fa-solid fa-robot"></i>
+                        Automatisation & Scripts
+                    </span>
+                    <small class="tech-used">
+                        Python • Bash • Scripts système
+                    </small>
+                    <div class="progress">
+                        <div class="progress-bar" data-level="80%"></div>
+                    </div>
+                </div>
+
+
+                <div class="skill">
+                    <span><i class="fa-solid fa-server"></i> Back-End</span>
+                    <div class="progress">
+                    <div class="progress-bar" data-level="80%"></div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <span>
+                        <i class="fa-solid fa-gamepad"></i>
+                        Applications Desktop & Jeux
+                    </span>
+                    <small class="tech-used">Pygame • Tkinter</small>
+                    <div class="progress">
+                        <div class="progress-bar" data-level="70%"></div>
+                    </div>
+                </div>
+
+
+                <div class="skill">
+                    <span><i class="fa-solid fa-database"></i> Bases de Données</span>
+                    <div class="progress">
+                    <div class="progress-bar" data-level="35%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            const boxes = document.querySelectorAll(".skills-box");
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+
+                        const bars = entry.target.querySelectorAll(".progress-bar");
+                        bars.forEach(bar => {
+                            bar.style.width = bar.dataset.level;
+                        });
+                    }
+                });
+            }, {threshold: 0.3} );
+            boxes.forEach(box => observer.observe(box))
+        </script>
+    </section>
+
+
     <section id="contact">
         <div class="contact-container">
             <!-- Infos -->
@@ -242,7 +366,6 @@
             <ul></ul>
         </div>   
     </section>
-
 
     <footer>
         <p>© 2025 Jean DJANTA. Tous droits réservés.</p>

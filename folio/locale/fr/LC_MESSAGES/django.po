@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-01-20 10:31+0000\n"
+"POT-Creation-Date: 2026-02-10 08:46+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -34,79 +34,87 @@ msgstr ""
 msgid "Entrer votre message ..."
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:28 .\folio\templates\folio\folio.html:48
+#: .\folio\templates\folio\folio.html:31 .\folio\templates\folio\folio.html:51
 msgid "Portfolio"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:58
+#: .\folio\templates\folio\folio.html:61
 msgid "Accueil"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:61
+#: .\folio\templates\folio\folio.html:64
 msgid "À Propos"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:64
+#: .\folio\templates\folio\folio.html:67
 msgid "Projets"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:67
+#: .\folio\templates\folio\folio.html:70 .\folio\templates\folio\folio.html:187
 msgid "Compétences"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:70 .\folio\templates\folio\folio.html:106
+#: .\folio\templates\folio\folio.html:73 .\folio\templates\folio\folio.html:109
 msgid "Contact"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:82
+#: .\folio\templates\folio\folio.html:85
 msgid "FR/EN"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:105
+#: .\folio\templates\folio\folio.html:108
 msgid "Mes Projets"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:117
+#: .\folio\templates\folio\folio.html:120
 msgid "À Propos de moi"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:144
+#: .\folio\templates\folio\folio.html:147
 msgid "Projets mis en Avant"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:156
+#: .\folio\templates\folio\folio.html:159
 msgid "En ligne"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:173
+#: .\folio\templates\folio\folio.html:176
 msgid "Details"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:186
+#: .\folio\templates\folio\folio.html:194
+msgid "Langages de Programmation"
+msgstr ""
+
+#: .\folio\templates\folio\folio.html:237
+msgid "Domaines de Compétence"
+msgstr ""
+
+#: .\folio\templates\folio\folio.html:310
 msgid "Informations de contact"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:190
+#: .\folio\templates\folio\folio.html:314
 msgid "E-mail :"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:210
+#: .\folio\templates\folio\folio.html:334
 msgid "Vous avez un projet ?"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:212
+#: .\folio\templates\folio\folio.html:336
 msgid "Discutons de votre idée et construisons une solution adaptée."
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:215
+#: .\folio\templates\folio\folio.html:339
 msgid "Envoyer un e-mail"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:222
+#: .\folio\templates\folio\folio.html:346
 msgid "Contactez-moi"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:224
+#: .\folio\templates\folio\folio.html:348
 msgid ""
 "\n"
 "                        Vous avez un projet, une idée ou une question ?\n"
@@ -115,19 +123,19 @@ msgid ""
 "                    "
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:236
+#: .\folio\templates\folio\folio.html:360
 msgid "Envoyer le message"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:282
+#: .\folio\templates\folio\folio.html:404
 msgid "Technologies utilisées"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:290
+#: .\folio\templates\folio\folio.html:412
 msgid "Voir le site web"
 msgstr ""
 
-#: .\folio\templates\folio\folio.html:297
+#: .\folio\templates\folio\folio.html:419
 msgid "Voir le code source"
 msgstr ""
 

@@ -1,6 +1,188 @@
-{{ request }}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Compétences</title>
 
-<br/> <br/>
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-{{ type_request }}
+  <style>
+    * {
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
 
+body {
+  margin: 0;
+  background: radial-gradient(circle at top, #0f172a, #020617);
+  color: #e5e7eb;
+}
+
+.skills-section {
+  padding: 80px 10%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 60px;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.skills-box {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  padding: 30px;
+  box-shadow: 0 0 30px rgba(56, 189, 248, 0.1);
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.8s ease;
+}
+
+.skills-box.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.skills-box h2 {
+  margin-bottom: 30px;
+  color: #7dd3fc;
+}
+
+.skill {
+  margin-bottom: 22px;
+}
+
+.skill span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.skill i {
+  color: #38bdf8;
+}
+
+.progress {
+  width: 100%;
+  height: 10px;
+  background: #020617;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  border-radius: 10px;
+  transition: width 1.5s ease;
+}
+
+  </style>
+</head>
+<body>
+
+<section class="skills-section" id="skills">
+
+  <h1 class="section-title">Compétences</h1>
+
+  <div class="skills-container">
+
+    <!-- LANGAGES -->
+    <div class="skills-box hidden">
+      <h2><i class="fa-solid fa-code"></i> Langages de Programmation</h2>
+
+      <div class="skill">
+        <span><i class="fa-brands fa-python"></i> Python</span>
+        <div class="progress">
+          <div class="progress-bar" data-level="85%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span><i class="fa-brands fa-js"></i> JavaScript</span>
+        <div class="progress">
+          <div class="progress-bar" data-level="75%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span><i class="fa-solid fa-code"></i> C / C++</span>
+        <div class="progress">
+          <div class="progress-bar" data-level="70%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span><i class="fa-brands fa-html5"></i> HTML / CSS</span>
+        <div class="progress">
+          <div class="progress-bar" data-level="90%"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DOMAINES -->
+    <div class="skills-box hidden">
+      <h2><i class="fa-solid fa-bullseye"></i> Domaines de Compétence</h2>
+
+      <div class="skill">
+        <span><i class="fa-solid fa-laptop-code"></i> Développement Web</span>
+        <div class="progress">
+          <div class="progress-bar" data-level="85%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span><i class="fa-solid fa-server"></i> Back-End</span>
+        <div class="progress">
+          <div class="progress-bar" data-level="80%"></div>
+        </div>
+      </div>
+
+      <div class="skill">
+        <span><i class="fa-solid fa-database"></i> Bases de Données</span>
+        <div class="progress">
+          <div class="progress-bar" data-level="75%"></div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- <script src="script.js"></script> -->
+ <script>
+    const boxes = document.querySelectorAll(".skills-box");
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("show");
+
+      const bars = entry.target.querySelectorAll(".progress-bar");
+      bars.forEach(bar => {
+        bar.style.width = bar.dataset.level;
+      });
+    }
+  });
+}, { threshold: 0.3 });
+
+boxes.forEach(box => observer.observe(box));
+
+ </script>
+</body>
+</html>
