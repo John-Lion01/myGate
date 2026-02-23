@@ -72,3 +72,28 @@
     border-radius: 10px;
     transition: width 1.5s ease;
 }
+
+@media (max-width: 400px) {
+    #competence {
+        padding: 90px 10px 40px;
+    }
+    .skills-box{
+        padding: 20px 10px;
+    }
+}
+@media (max-width : 340px) {
+    #competence {
+        padding: 90px 5px 40px;
+    }
+    .skills-box{
+        width: 90%;
+        justify-self: center;
+    }
+    .progress {
+        width: 90%;
+    }
+    #competence h1 {
+        font-size: 2.5rem;
+    }
+
+}

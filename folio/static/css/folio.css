@@ -24,6 +24,7 @@ html, body {
   animation: gradientMove 20s ease infinite;
   z-index: -1;
   /* overscroll-behavior: contain; */
+  padding: 0; margin: 0;
 }
 
 @keyframes gradientMove {
@@ -36,7 +37,8 @@ html, body {
   position: relative;
   z-index: 1;
   padding: 0;
-  margin: 2px;
+  margin: 0;
+  width: 100%;
 }
 
 /* header */
@@ -103,6 +105,11 @@ button.nav-btn:hover {
 #home {
   color: #ffffff;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  flex-wrap: wrap;
+  padding: 10px;
 }
 h1.name {
   font-family: 'IBM Plex Serif' ;
@@ -123,6 +130,7 @@ p.sh-des {
   font-size: 24px;
   text-align: center;
   font-weight: 700;
+  max-width: 500px;
 }
 p.sh-des:hover{
   cursor: pointer;
@@ -156,24 +164,6 @@ a.button:hover {
   background: conic-gradient(from 180deg at 50% 50%, blue -51.92deg, green 143.65deg, blue 308.08deg, green 503.65deg);
 }
 
-@media (min-width:1100px) {
-  #home {
-    padding: 50px;
-    max-width: 1000px;
-    gap: 100px;
-    justify-self: center;
-  }
-}
-
-@media (max-width:1100px) {
-  #home {
-    flex-direction: column;
-    padding: 30px;
-  }
-  .home-2 {
-    text-align: center;
-  }
-}
 @media (max-width:568px) {
   #home {
     padding: 30px 15px;
@@ -558,30 +548,23 @@ a.det:hover {color: #ffffffca;}
     padding: 90px 30px 40px;
     color: #eaeaea;
     display: flex;
-    flex-direction: column;
-    max-width: 1000px;
-    min-width: 700px;
-    gap: 40px;
-    justify-self: center;
-}
-@media (max-width:800px) {
-    #contact {
-        flex-direction: column;
-        max-width: 600px;
-    }
+    justify-content: center;
+    align-items: center;
 }
 
 .contact-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 50px;
+  flex-wrap: wrap;
 }
-@media (max-width:720px) {
+/* @media (max-width:720px) {
   .contact-container {
     display: flex;
     flex-direction: column;
   }
-}
+} */
 .contact-info h2,
 .contact-form h2 {
     font-size: 2rem;
@@ -622,9 +605,16 @@ a.det:hover {color: #ffffffca;}
 
 .contact-cta h3, .contact-cta p {
   margin-bottom: 10px;
+  flex-wrap: wrap;
+  max-width: 300px;
 }
 .contact-cta a {
     text-align: center;
+}
+@media (max-width: 670px) {
+  .contact-cta {
+    padding: 15px;
+  }
 }
 
 /* contact form */
